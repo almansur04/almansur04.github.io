@@ -1,0 +1,11 @@
+title: Almansur Kakimov
+description: Researcher investigating deep learning methodologies for 5G network optimization.
+url: "https://almansur04.github.io"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - LICENSE
