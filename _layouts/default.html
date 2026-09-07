@@ -26,7 +26,33 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
+        
+    html { 
+        scroll-behavior: smooth; 
+        scroll-padding-top: 3rem;
+    }
+    
+    .site-nav {
+        display: flex;
+        gap: 1.5rem;
+        margin: 1.5rem 0 2rem 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        flex-wrap: wrap;
+    }
+    .site-nav a {
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+        transition: color 0.2s;
+    }
+    .site-nav a:hover { color: var(--text-main); }
+    
+    [data-theme="dark"] .mermaid { filter: invert(0.88) hue-rotate(180deg); }
+        
     body {
         font-family: var(--font-stack);
         background-color: var(--bg-color);
@@ -171,6 +197,11 @@
                 toggleBtn.textContent = 'Light Mode';
             }
         });
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
     </script>
 </body>
 </html>
