@@ -660,7 +660,25 @@
 
         @media (max-width: 600px) {
             body {
-                padding: 2rem 1.25rem;
+                padding: 1.5rem 1.25rem;
+            }
+
+            header {
+                padding-top: 2rem;
+            }
+
+            .theme-toggle {
+                top: 1rem;
+                right: 1.25rem;
+                font-size: 0.65rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+                font-size: 0.9rem;
+                margin-bottom: 2rem;
             }
 
             h1 {
@@ -706,10 +724,23 @@
                 padding: 1.25rem;
             }
 
-            .data-table-wrapper,
             .mermaid {
                 overflow-x: auto;
                 width: 100%;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 1rem;
+            }
+
+            .mermaid svg {
+                max-width: none !important;
+                min-width: 600px;
+                height: auto;
+            }
+
+            .data-table-wrapper {
+                overflow-x: auto;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
             }
 
             .item-header {
