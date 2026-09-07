@@ -11,6 +11,49 @@
             --text-muted: #666666;
             --border-color: #e5e5e5;
         }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #333333;
+        }
+
+        [data-theme="dark"] .description {
+            color: var(--text-main);
+        }
+        
+        [data-theme="dark"] .tag {
+            background: #1e1e1e;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--text-main);
+            color: var(--bg-color);
+        }
+
+        @media (max-width: 600px) {
+            .theme-toggle {
+                top: 1rem;
+                right: 1.5rem;
+            }
+        }
         
         * {
             box-sizing: border-box;
@@ -174,7 +217,7 @@
     </style>
 </head>
 <body>
-
+    <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
     <header>
         <h1>Almansur Kakimov</h1>
         <div class="subtitle">AI Engineering Lead & Machine Learning Researcher</div>
@@ -339,5 +382,30 @@
         &copy; 2026 Almansur Kakimov. Designed for academic review.
     </footer>
 
+</body>
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        
+        const currentTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleBtn.textContent = 'Light Mode';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                toggleBtn.textContent = 'Dark Mode';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleBtn.textContent = 'Light Mode';
+            }
+        });
+    </script>
 </body>
 </html>
