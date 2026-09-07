@@ -12,14 +12,27 @@
         </div>
 
         <div class="item">
-            <div class="item-header">
-                <h3>ML-Driven Load Balancing and Radio Resource Management for 5G SONs (BSc Thesis)</h3>
-                <span class="meta">Sep 2024 &mdash; Jun 2025</span>
-            </div>
-            <div class="description" style="margin-top: 0.5rem;">
-                <p>Proposed an automated, explainable machine learning pipeline for proactive mobile load balancing and QoE prediction using real-world 5G telemetry from Astana. Utilized SMOTE to address class imbalance and trained ensemble models (Random Forest, LightGBM) to estimate response latency and throughput. Implemented Tree-based SHAP analysis to enable an operational policy distinguishing coverage from congestion-driven degradation for targeted Cell Individual Offset (CIO) steering, achieving an inference pipeline averaging 8.5 ms per sample for near-RT RIC deployment.</p>
+        <div class="item-header">
+            <h3>ML-Driven Load Balancing and Radio Resource Management for 5G SONs (BSc Thesis)</h3>
+            <span class="meta">Sep 2024 &mdash; Jun 2025</span>
+        </div>
+        <div class="description" style="margin-top: 0.5rem;">
+            <p>Proposed an automated, explainable machine learning pipeline for proactive mobile load balancing and QoE prediction using real-world 5G telemetry from Astana. Utilized SMOTE to address class imbalance and trained ensemble models (Random Forest, LightGBM) to estimate response latency and throughput. Implemented Tree-based SHAP analysis to enable an operational policy distinguishing coverage from congestion-driven degradation for targeted Cell Individual Offset (CIO) steering, achieving an inference pipeline averaging 8.5 ms per sample for near-RT RIC deployment.</p>
+            
+            <div style="margin: 2rem 0; padding: 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 6px; text-align: center;">
+                <div class="mermaid">
+                graph LR
+                    A[5G Telemetry] --> B(SMOTE Balancing)
+                    B --> C{Ensemble Models}
+                    C -->|RF| D[Latency Pred.]
+                    C -->|LightGBM| E[Throughput Est.]
+                    D --> F((SHAP Explainer))
+                    E --> F
+                    F --> G[CIO Steering Policy]
+                </div>
             </div>
         </div>
+    </div>
 
         <div class="item">
             <div class="item-header">
