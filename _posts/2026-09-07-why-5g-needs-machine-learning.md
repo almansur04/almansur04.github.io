@@ -7,5 +7,3 @@ As mobile networks evolve from 4G to 5G, the complexity of managing radio resour
 
 ### The Core Problem
 Rapid urban densification creates severe spatiotemporal load imbalances...
-
-*(You can write standard text here. Because we used Markdown, you can make text **bold**, add lists, or include code blocks effortlessly!)*
