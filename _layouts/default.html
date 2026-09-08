@@ -258,6 +258,57 @@
             border-top: 1px solid var(--border-color);
         }
 
+                details {
+            margin-top: 1rem;
+
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+
+            padding: 0.5rem 1rem;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.95rem;
+
+            outline: none;
+            list-style-position: inside;
+        }
+
+        summary:hover {
+            color: var(--text-muted);
+        }
+
+        details ul {
+            margin-top: 1rem;
+            padding-top: 1rem;
+
+            border-top: 1px solid var(--border-color);
+        }
+
+        details[open] summary ~ * {
+            animation: slideDown 0.35s ease-out;
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .item {
+            margin-bottom: 2.5rem;
+        }
+        
         .item {
             margin-bottom: 2.5rem;
         }
