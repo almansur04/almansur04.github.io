@@ -4,16 +4,14 @@
 
     <div class="item">
         <div class="item-header">
-            <h3>Separating Device Effects from Cellular Network Performance Using Cellular Telemetry Segmentation</h3>
+            <h3>Telemetry Segmentation for Device-Model Comparison and Cell-Level Quality Prioritization in Cellular Networks</h3>
             <span class="meta">Apr 2026 &#45; Jun 2026</span>
         </div>
         
         <!-- Summarize the primary contribution and key dataset scale -->
         <div class="tldr-box">
             <strong>TL;DR</strong>
-            Isolated network degradation from device constraints by analyzing
-            <span class="highlight">1M+ web sessions</span>
-            using statistical segmentation, providing a framework for targeted infrastructure upgrades.
+            Using <span class="highlight">1M</span> mobile web sessions in Kazakhstan, the study shows workload strongly affects measured throughput (0.23–4.71 Mbps across 6 resources), so fair device comparison requires normalization; even after controlling conditions, 10 device models differ significantly (H(9)=6839.03, p<0.001, ε²=0.169) with median throughput of 4.09–5.95 Mbps.
         </div>
 
         <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem;">
@@ -23,11 +21,7 @@
 
         <div class="description" style="margin-top: 0.5rem;">
             <p>
-                Analyzed one million mobile web sessions collected by a cellular operator in Kazakhstan to distinguish network degradation from device-related variation. Applied Kruskal-Wallis and Dunn tests with Bonferroni correction on a restricted dataset of
-                <span class="highlight">40,439 sessions</span>
-                to identify significant throughput differences. Developed a practical framework for prioritizing infrastructure improvements by classifying active cells using a
-                <span class="highlight">−95 dBm</span>
-                signal-strength threshold to isolate coverage-related issues from capacity congestion.
+                For network prioritization, <span class="highlight">856/945 cells (90.6%)</span> exceed the 5% failure-rate threshold, while the 50 highest-failure cells account for 34.8% of 100,693 failures, demonstrating strong concentration of user impact. The proposed methodology enables more reliable device benchmarking and more actionable cellular optimization by separating measurement bias, device effects, and network-cell impact.
             </p>
         </div>
     </div>
