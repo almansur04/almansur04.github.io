@@ -1,11 +1,14 @@
+# Site identity and canonical URL
 title: Almansur Kakimov
 description: Researcher in AI-Driven Intelligent Wireless Networks for 5G/6G.
 url: "https://almansur04.github.io"
 
+# Jekyll plugins used for search metadata and sitemap generation
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Files that should not be included in the generated site
 exclude:
   - README.md
   - LICENSE
