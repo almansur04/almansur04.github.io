@@ -1,14 +1,33 @@
 <section id="blog">
+    <!-- Latest technical writing and research notes -->
     <h2>Writing</h2>
+
     <div class="card-grid">
         {% for post in site.posts limit:3 %}
         <div class="card">
             <div class="card-header">
-                <div class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-                <div class="card-subtitle">{{ post.date | date: "%B %d, %Y" }}</div>
+                <div class="card-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </div>
+
+                <div class="card-subtitle">
+                    {{ post.date | date: "%B %d, %Y" }}
+                </div>
             </div>
-            <p class="description">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-            <div style="margin-top: 1rem;"><a href="{{ post.url }}" style="font-size: 0.85rem; font-weight: 600;">Read Post &rarr;</a></div>
+
+            <!-- Limit excerpt length to keep cards scannable -->
+            <p class="description">
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
+            </p>
+
+            <div style="margin-top: 1rem;">
+                <a
+                    href="{{ post.url }}"
+                    style="font-size: 0.85rem; font-weight: 600;"
+                >
+                    Read Post &rarr;
+                </a>
+            </div>
         </div>
         {% endfor %}
     </div>
