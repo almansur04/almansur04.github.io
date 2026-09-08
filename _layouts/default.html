@@ -12,6 +12,7 @@
     <meta property="og:url" content="https://almansur04.github.io/">
 
     <style>
+        /* Design tokens for light and dark themes */
         :root {
             --bg-color: #fbfbfd;
             --text-main: #1d1d1f;
@@ -131,6 +132,7 @@
             font-weight: 500;
         }
 
+        /* Keep primary navigation visible while scrolling */
         .site-nav {
             position: sticky;
             top: 0;
@@ -162,6 +164,7 @@
             color: var(--text-main);
         }
 
+        /* Highlight current PhD availability and target research area */
         .status-banner {
             display: inline-flex;
             align-items: center;
@@ -181,6 +184,7 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Provide concise, high-signal summaries for rapid scanning */
         .tldr-box {
             background: var(--accent-pill);
             border-left: 3px solid var(--text-muted);
@@ -208,6 +212,7 @@
             margin-top: 0.25rem;
         }
 
+        /* Emphasize quantitative research and engineering metrics */
         .highlight {
             background: var(--text-main);
             color: var(--bg-color);
@@ -227,6 +232,7 @@
             color: var(--text-main);
         }
 
+        /* Native disclosure components for secondary details */
         details {
             margin-top: 1rem;
 
@@ -258,37 +264,7 @@
             border-top: 1px solid var(--border-color);
         }
 
-                details {
-            margin-top: 1rem;
-
-            background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-
-            padding: 0.5rem 1rem;
-        }
-
-        summary {
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--text-main);
-            font-size: 0.95rem;
-
-            outline: none;
-            list-style-position: inside;
-        }
-
-        summary:hover {
-            color: var(--text-muted);
-        }
-
-        details ul {
-            margin-top: 1rem;
-            padding-top: 1rem;
-
-            border-top: 1px solid var(--border-color);
-        }
-
+        /* Animate disclosure content without adding JavaScript */
         details[open] summary ~ * {
             animation: slideDown 0.35s ease-out;
         }
@@ -305,10 +281,6 @@
             }
         }
 
-        .item {
-            margin-bottom: 2.5rem;
-        }
-        
         .item {
             margin-bottom: 2.5rem;
         }
@@ -348,7 +320,7 @@
         li {
             margin-bottom: 0.35rem;
         }
-        
+
         .header-cta {
             text-align: center;
             margin-top: 2rem;
@@ -517,7 +489,6 @@
             font-weight: 600;
         }
 
-
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -578,6 +549,7 @@
             font-size: 0.95rem;
         }
 
+        /* Allow wide research tables to scroll instead of overflowing the layout */
         .data-table-wrapper {
             overflow-x: auto;
 
@@ -709,6 +681,7 @@
             transform: translateY(-3px);
         }
 
+        /* Mobile layout prioritizes readability and horizontal containment */
         @media (max-width: 600px) {
             body {
                 padding: 1.5rem 1.25rem;
@@ -744,6 +717,7 @@
                 line-height: 1.4;
             }
 
+            /* Preserve navigation in a single horizontal row */
             .site-nav {
                 flex-wrap: nowrap;
                 overflow-x: auto;
@@ -775,6 +749,7 @@
                 padding: 1.25rem;
             }
 
+            /* Keep wide Mermaid diagrams scrollable on small screens */
             .mermaid {
                 overflow-x: auto;
                 width: 100%;
@@ -836,6 +811,7 @@
             }
         }
 
+        /* Print-friendly layout for CV and academic review */
         @media print {
             body {
                 background: white;
@@ -915,7 +891,6 @@
         ↑
     </a>
 
-
     <footer
         style="
             margin-top: 4rem;
@@ -926,7 +901,7 @@
             padding-top: 2rem;
         "
     >
-        &copy; 2026 Almansur Kakimov. Designed for academic review.
+        &copy; 2026.
     </footer>
 
     <script>
